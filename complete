@@ -1,5 +1,3 @@
-Absolutely! Here’s a **polished, production-ready version** of your enhanced Ansible playbook with **real-time verification**, clean structure, handlers, OS-specific tasks, and a comprehensive report. I’ve condensed and clarified everything for clarity and maintainability.
-
 ---
 
 # **1️⃣ Inventory File** (`inventory.ini`)
