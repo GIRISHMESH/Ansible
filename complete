@@ -4,7 +4,7 @@ Absolutely! Here’s a **polished, production-ready version** of your enhanced A
 
 # **1️⃣ Inventory File** (`inventory.ini`)
 
-```ini
+
 [centos]
 centos01 ansible_host=192.168.1.10
 centos02 ansible_host=192.168.1.11
@@ -22,13 +22,13 @@ ubuntu
 [linux:vars]
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-```
+
 
 ---
 
 # **2️⃣ Directory Structure**
 
-```
+
 ansible_project/
 ├── inventory.ini
 ├── linux_unified_setup.yml
@@ -43,7 +43,7 @@ ansible_project/
 
 # **3️⃣ Main Playbook with Real-Time Verification** (`linux_unified_setup.yml`)
 
-```yaml
+
 ---
 - name: 🖥️ Unified Linux Configuration (CentOS & Ubuntu)
   hosts: linux
@@ -275,7 +275,7 @@ ansible_project/
     - name: 📄 Show report location
       ansible.builtin.debug:
         msg: "📊 Report saved at {{ report_file }}"
-```
+
 
 ---
 
@@ -292,7 +292,7 @@ ansible_project/
 
 # **5️⃣ Enhanced Deployment Report Template** (`templates/deployment_report.j2`)
 
-```jinja2
+
 # ANSIBLE DEPLOYMENT REPORT
 Generated: {{ ansible_date_time.iso8601 }}
 Control Machine: {{ ansible_hostname }}
@@ -311,4 +311,4 @@ Timezone: {{ timezone }}
   {% for pkg in hostvars[host].verification_results.packages %}
   ✓ {{ pkg }}
  
-```
+
